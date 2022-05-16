@@ -1,0 +1,30 @@
+# Install packages (run only once) ----------------------------------------
+
+install.packages("drat")
+drat:::add("epiforecasts")
+install.packages("EpiNow")
+install.packages("NCoVUtils")
+install.packages("EpiSoon")
+
+
+# Load packages -----------------------------------------------------------
+
+packages <- c("EpiNow",
+              "EpiSoon",
+              "readr",
+              "dplyr",
+              "tidyr",
+              "data.table",
+              "lubridate",
+              "future",
+              "forecastHybrid",
+              "NCoVUtils",
+              "magrittr",
+              "furrr",
+              "future.apply",
+              "fable",
+              "fabletools",
+              "feasts",
+              "urca")
+
+lapply(packages, require, character.only = TRUE)
